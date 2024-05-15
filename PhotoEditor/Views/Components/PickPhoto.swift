@@ -18,7 +18,12 @@ struct PickPhoto: View {
             Text("PICK A PHOTO")
                 .bold()
                 .font(.largeTitle)
-                .padding()
+                .padding([.top, .trailing, .leading], 8)
+                .padding(.bottom, 4)
+            Text("TAP TO START")
+                .bold()
+                .font(.subheadline)
+                .padding([.trailing, .leading], 8)
         }
         .foregroundStyle(.edLightGray)
         .background(.clear)
