@@ -12,15 +12,16 @@
 		5A91291D2BF38D3400B81B5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A91291C2BF38D3400B81B5F /* Assets.xcassets */; };
 		5A9129202BF38D3400B81B5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A91291F2BF38D3400B81B5F /* Preview Assets.xcassets */; };
 		5A9129282BF38F3900B81B5F /* HeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129272BF38F3900B81B5F /* HeadlineView.swift */; };
-		5A91292E2BF39EA900B81B5F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91292D2BF39EA900B81B5F /* Home.swift */; };
-		5A9129302BF39EF900B81B5F /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91292F2BF39EF900B81B5F /* Crop.swift */; };
-		5A9129322BF3A27900B81B5F /* CustomImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129312BF3A27900B81B5F /* CustomImagePicker.swift */; };
-		5A9129352BF3D56600B81B5F /* Home2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129342BF3D56500B81B5F /* Home2.swift */; };
+		5A9129322BF3A27900B81B5F /* ImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129312BF3A27900B81B5F /* ImageCropper.swift */; };
+		5A9129352BF3D56600B81B5F /* PickPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129342BF3D56500B81B5F /* PickPhotoView.swift */; };
 		5A9129372BF3D5AF00B81B5F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129362BF3D5AF00B81B5F /* ImagePicker.swift */; };
 		5A9129392BF3D81B00B81B5F /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129382BF3D81B00B81B5F /* DrawingViewModel.swift */; };
 		5A91293B2BF3DCAE00B81B5F /* DrawingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91293A2BF3DCAE00B81B5F /* DrawingScreen.swift */; };
 		5A91293D2BF3E82B00B81B5F /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91293C2BF3E82A00B81B5F /* TextBox.swift */; };
 		5A91293F2BF4A77000B81B5F /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91293E2BF4A77000B81B5F /* CanvasView.swift */; };
+		5A9129422BF4BA5000B81B5F /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = 5A9129412BF4BA5000B81B5F /* Mantis */; };
+		5A9129692BF4FD3E00B81B5F /* AddCancelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129682BF4FD3E00B81B5F /* AddCancelColor.swift */; };
+		5A91296B2BF504D700B81B5F /* PickPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91296A2BF504D700B81B5F /* PickPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,15 +31,15 @@
 		5A91291C2BF38D3400B81B5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A91291F2BF38D3400B81B5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5A9129272BF38F3900B81B5F /* HeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineView.swift; sourceTree = "<group>"; };
-		5A91292D2BF39EA900B81B5F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		5A91292F2BF39EF900B81B5F /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
-		5A9129312BF3A27900B81B5F /* CustomImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePicker.swift; sourceTree = "<group>"; };
-		5A9129342BF3D56500B81B5F /* Home2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home2.swift; sourceTree = "<group>"; };
+		5A9129312BF3A27900B81B5F /* ImageCropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropper.swift; sourceTree = "<group>"; };
+		5A9129342BF3D56500B81B5F /* PickPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPhotoView.swift; sourceTree = "<group>"; };
 		5A9129362BF3D5AF00B81B5F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5A9129382BF3D81B00B81B5F /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
 		5A91293A2BF3DCAE00B81B5F /* DrawingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreen.swift; sourceTree = "<group>"; };
 		5A91293C2BF3E82A00B81B5F /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		5A91293E2BF4A77000B81B5F /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		5A9129682BF4FD3E00B81B5F /* AddCancelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCancelColor.swift; sourceTree = "<group>"; };
+		5A91296A2BF504D700B81B5F /* PickPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPhoto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9129422BF4BA5000B81B5F /* Mantis in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				5A9129272BF38F3900B81B5F /* HeadlineView.swift */,
+				5A9129682BF4FD3E00B81B5F /* AddCancelColor.swift */,
+				5A91296A2BF504D700B81B5F /* PickPhoto.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -101,12 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				5A91291A2BF38D3100B81B5F /* ContentView.swift */,
-				5A91292D2BF39EA900B81B5F /* Home.swift */,
-				5A9129342BF3D56500B81B5F /* Home2.swift */,
-				5A9129312BF3A27900B81B5F /* CustomImagePicker.swift */,
+				5A9129342BF3D56500B81B5F /* PickPhotoView.swift */,
 				5A91293A2BF3DCAE00B81B5F /* DrawingScreen.swift */,
 				5A91293E2BF4A77000B81B5F /* CanvasView.swift */,
 				5A9129362BF3D5AF00B81B5F /* ImagePicker.swift */,
+				5A9129312BF3A27900B81B5F /* ImageCropper.swift */,
 				5A9129262BF38F1800B81B5F /* Components */,
 			);
 			path = Views;
@@ -123,7 +126,6 @@
 		5A9129332BF3BC9D00B81B5F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5A91292F2BF39EF900B81B5F /* Crop.swift */,
 				5A91293C2BF3E82A00B81B5F /* TextBox.swift */,
 			);
 			path = Models;
@@ -145,6 +147,9 @@
 			dependencies = (
 			);
 			name = PhotoEditor;
+			packageProductDependencies = (
+				5A9129412BF4BA5000B81B5F /* Mantis */,
+			);
 			productName = PhotoEditor;
 			productReference = 5A9129152BF38D3100B81B5F /* PhotoEditor.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 5A91290C2BF38D3100B81B5F;
+			packageReferences = (
+				5A9129402BF4BA5000B81B5F /* XCRemoteSwiftPackageReference "Mantis" */,
+			);
 			productRefGroup = 5A9129162BF38D3100B81B5F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,17 +208,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A91293B2BF3DCAE00B81B5F /* DrawingScreen.swift in Sources */,
-				5A9129322BF3A27900B81B5F /* CustomImagePicker.swift in Sources */,
+				5A9129322BF3A27900B81B5F /* ImageCropper.swift in Sources */,
 				5A91293F2BF4A77000B81B5F /* CanvasView.swift in Sources */,
-				5A9129352BF3D56600B81B5F /* Home2.swift in Sources */,
+				5A9129352BF3D56600B81B5F /* PickPhotoView.swift in Sources */,
 				5A91291B2BF38D3100B81B5F /* ContentView.swift in Sources */,
-				5A91292E2BF39EA900B81B5F /* Home.swift in Sources */,
 				5A9129192BF38D3100B81B5F /* PhotoEditorApp.swift in Sources */,
 				5A9129392BF3D81B00B81B5F /* DrawingViewModel.swift in Sources */,
 				5A9129372BF3D5AF00B81B5F /* ImagePicker.swift in Sources */,
 				5A9129282BF38F3900B81B5F /* HeadlineView.swift in Sources */,
 				5A91293D2BF3E82B00B81B5F /* TextBox.swift in Sources */,
-				5A9129302BF39EF900B81B5F /* Crop.swift in Sources */,
+				5A9129692BF4FD3E00B81B5F /* AddCancelColor.swift in Sources */,
+				5A91296B2BF504D700B81B5F /* PickPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A9129402BF4BA5000B81B5F /* XCRemoteSwiftPackageReference "Mantis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/guoyingtao/Mantis.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A9129412BF4BA5000B81B5F /* Mantis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A9129402BF4BA5000B81B5F /* XCRemoteSwiftPackageReference "Mantis" */;
+			productName = Mantis;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A91290D2BF38D3100B81B5F /* Project object */;
 }

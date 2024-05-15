@@ -11,7 +11,11 @@ import SwiftUI
 
 class DrawingViewModel: ObservableObject {
     @Published var showImagePicker = false
-    @Published var imageData: Data = Data(count: 0)
+    @Published var imageData: Data = Data(count: 0) {
+        didSet {
+            print("imageData changed \(imageData)")
+        }
+    }
     @Published var canvas = PKCanvasView()
     @Published var toolPicker = PKToolPicker()
     @Published var textBox: [TextBox] = []
@@ -20,6 +24,8 @@ class DrawingViewModel: ObservableObject {
     @Published var rect: CGRect = .zero
     @Published var showAlert = false
     @Published var message = ""
+    @Published var isShowingCropView = false
+    @Published var croppedImage: UIImage?
     
     func cancelImageEditing() {
         imageData = Data(count: 0)

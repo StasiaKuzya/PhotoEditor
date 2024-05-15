@@ -7,12 +7,29 @@
 
 import SwiftUI
 import PencilKit
+import Mantis
 
 struct DrawingScreen: View {
     @EnvironmentObject var model: DrawingViewModel
+    @State private var uiImage: UIImage = UIImage(named:"placeholder")!
+    @State private var showingCropper = false
+    @State private var cropShapeType: Mantis.CropShapeType = .rect
+    @State private var presetFixedRatioType: Mantis.PresetFixedRatioType = .canUseMultiplePresetFixedRatio()
+    
+    func reset() {
+        if let image = UIImage(data: model.imageData) {
+            uiImage = image
+        } else {
+            print("image data could not be converted to uiImage")
+        }
+        cropShapeType = .rect
+        presetFixedRatioType = .canUseMultiplePresetFixedRatio()
+    }
     
     var body: some View {
         ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.edJat, Color.black]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            
             GeometryReader { proxy -> AnyView in
                 let size = proxy.frame(in: .global)
                 
@@ -65,11 +82,16 @@ struct DrawingScreen: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    model.saveImage()
-                } label: {
-                    Text("Save")
-                }
+                Button(action: {
+                    reset()
+                    model.isShowingCropView.toggle()
+                    model.isShowingCropView = true
+                    showingCropper = true
+                }, label: {
+                    Image(systemName: "scissors")
+                        .tint(.edLightGray)
+                        .bold()
+                })
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
@@ -83,11 +105,29 @@ struct DrawingScreen: View {
                     model.toolPicker.setVisible(false, forFirstResponder: model.canvas)
                     model.canvas.resignFirstResponder()
                 }, label: {
-                    Image(systemName: "plus")
+                    Image(systemName: "textformat")
+                        .tint(.edLightGray)
+                        .bold()
                 })
 
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    model.saveImage()
+                } label: {
+                    Text("Save")
+                        .bold()
+                        .foregroundColor(.edLightGray)
+                }
+            }
         }
+        .fullScreenCover(isPresented: $showingCropper, content: {
+            ImageCropper(
+                image: $uiImage,
+                         cropShapeType: $cropShapeType,
+                         presetFixedRatioType: $presetFixedRatioType)
+                .ignoresSafeArea()
+        })
     }
     
     func getIndex(textBox: TextBox) ->Int {
@@ -99,7 +139,5 @@ struct DrawingScreen: View {
 }
 
 #Preview {
-    Home2()
+    PickPhotoView()
 }
-
-

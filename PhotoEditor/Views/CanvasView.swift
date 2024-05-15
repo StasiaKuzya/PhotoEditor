@@ -29,16 +29,15 @@ struct CanvasView: UIViewRepresentable {
             let subView = canvas.subviews[0]
             subView.addSubview(imageView)
             subView.sendSubviewToBack(imageView)
-            
-            toolPicker.setVisible(true, forFirstResponder: canvas)
-            toolPicker.addObserver(canvas)
-            canvas.becomeFirstResponder()
         }
+        
+        toolPicker.setVisible(true, forFirstResponder: canvas)
+        toolPicker.addObserver(canvas)
+        canvas.becomeFirstResponder()
         
         return canvas
     }
     
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
-
     }
 }
