@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Mantis
+//TODO: crop and cut via Mantis or other ways
 
 struct ImageCropper: UIViewControllerRepresentable {
     @Binding var image: UIImage
@@ -17,17 +18,18 @@ struct ImageCropper: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     
     class Coordinator: CropViewControllerDelegate {
-        func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
-            parent.image = cropped
-            print("transformation is \(transformation)")
-            parent.model.imageData = cropped.jpegData(compressionQuality: 1.0)!
-            parent.presentationMode.wrappedValue.dismiss()
-        }
-        
         var parent: ImageCropper
         
         init(_ parent: ImageCropper) {
             self.parent = parent
+        }
+        
+        func cropViewControllerDidCrop(_ cropViewController: Mantis.CropViewController, cropped: UIImage, transformation: Mantis.Transformation, cropInfo: Mantis.CropInfo) {
+            guard let data = cropped.pngData() else { return }
+            parent.image = cropped
+            print("transformation is \(transformation)")
+            parent.model.imageData = data
+            parent.presentationMode.wrappedValue.dismiss()
         }
         
         func cropViewControllerDidCrop(_ cropViewController: CropViewController, cropped: UIImage, transformation: Transformation) {

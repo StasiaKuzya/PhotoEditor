@@ -13,16 +13,17 @@ struct CanvasView: UIViewRepresentable {
     @Binding var imageData: Data
     @Binding var toolPicker: PKToolPicker
     
-    var rect: CGSize
+    var rect: CGSize = UIScreen.main.bounds.size
     
     func makeUIView(context: Context) -> PKCanvasView {
         canvas.isOpaque = false
         canvas.backgroundColor = .clear
         canvas.drawingPolicy = .anyInput
+        canvas.tool = PKInkingTool(.pen, color: UIColor.black, width: 1)
         
         if let image = UIImage(data: imageData) {
             let imageView = UIImageView(image: image)
-            imageView.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
+            imageView.frame = CGRect(x: 0, y: 0, width: rect.width + 35, height: rect.height)
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
             

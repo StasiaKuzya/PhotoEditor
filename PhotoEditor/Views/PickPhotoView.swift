@@ -55,7 +55,6 @@ struct PickPhotoView: View {
                     .foregroundColor(model.textBox[model.currentIndex].textColor)
                     .padding()
                     .foregroundColor(.edLightGray)
-                    .bold()
                 
                 AddCancelColor(model: model)
                     .overlay(
