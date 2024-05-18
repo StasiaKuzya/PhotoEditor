@@ -40,5 +40,21 @@ struct CanvasView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
+       for subview in uiView.subviews[0].subviews {
+          if subview is UIImageView {
+             subview.removeFromSuperview()
+          }
+       }
+       // Add new UIImageView
+        if let image = UIImage(data: imageData) {
+           let imageView = UIImageView(image: image)
+          imageView.frame = CGRect(x: 0, y: 0, width: rect.width + 35, height: rect.height)
+          imageView.contentMode = .scaleAspectFit
+          imageView.clipsToBounds = true
+                    
+          let subView = uiView.subviews[0]
+          subView.addSubview(imageView)
+          subView.sendSubviewToBack(imageView)
+       }
     }
 }
