@@ -44,17 +44,18 @@ class DrawingViewModel: ObservableObject {
         }
     }
     
-    func saveImage() {
+    func editPhoto() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
         canvas.drawHierarchy(in: CGRect(origin: .zero, size: rect.size), afterScreenUpdates: true)
         
         let swiftUIView = ZStack {
-            ForEach(textBox) { [self] box in
+            ForEach(textBox) { box in
                 Text(
-                    textBox[currentIndex].id == box.id
-                    && addNewBox ? "" : box.text)
+                    self.textBox[self.currentIndex].id == box.id &&
+                    self.addNewBox ? "" : box.text
+                )
                 .font(.system(size: 30))
-                .fontWeight(box.isBool ? .bold : . none)
+                .fontWeight(box.isBool ? .bold : .none)
                 .foregroundColor(box.textColor)
                 .offset(box.offset)
             }
@@ -63,17 +64,60 @@ class DrawingViewModel: ObservableObject {
         let controller = UIHostingController(rootView: swiftUIView).view!
         controller.frame = rect
         controller.backgroundColor = .clear
-        canvas.backgroundColor = .clear
         controller.drawHierarchy(in: CGRect(origin: .zero, size: rect.size), afterScreenUpdates: true)
-
+        
         let generatedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
-        if let image = generatedImage?.pngData() {
-            UIImageWriteToSavedPhotosAlbum(UIImage(data: image)!, nil, nil, nil)
-            print("success")
+        return generatedImage
+    }
+    
+    func saveImage() {
+        if let image = editPhoto() {
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             self.message = "Saved successfully"
+            self.showAlert.toggle()
+        } else {
+            self.message = "An error occurred while editing the photo."
             self.showAlert.toggle()
         }
     }
+//    func saveImage() {
+//        editPhoto()
+//        
+//        let generatedImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        
+//        if let image = generatedImage?.pngData() {
+//            UIImageWriteToSavedPhotosAlbum(UIImage(data: image)!, nil, nil, nil)
+//            print("success")
+//            self.message = "Saved successfully"
+//            self.showAlert.toggle()
+//        }
+//    }
+//    
+//    func editPhoto() {
+//        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
+//        canvas.drawHierarchy(in: CGRect(origin: .zero, size: rect.size), afterScreenUpdates: true)
+//        
+//        let swiftUIView = ZStack {
+//            ForEach(textBox) { [self] box in
+//                Text(
+//                    textBox[currentIndex].id == box.id
+//                    && addNewBox ? "" : box.text)
+//                .font(.system(size: 30))
+//                .fontWeight(box.isBool ? .bold : . none)
+//                .foregroundColor(box.textColor)
+//                .offset(box.offset)
+//            }
+//        }
+//        
+//        let controller = UIHostingController(rootView: swiftUIView).view!
+//        controller.frame = rect
+//        controller.backgroundColor = .clear
+//        canvas.backgroundColor = .clear
+//        controller.drawHierarchy(in: CGRect(origin: .zero, size: rect.size), afterScreenUpdates: true)
+//
+//        let generatedImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//    }
 }

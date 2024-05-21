@@ -31,20 +31,7 @@ struct ImageCropper: UIViewControllerRepresentable {
             parent.model.imageData = data
             parent.presentationMode.wrappedValue.dismiss()
         }
-        
-        func cropViewControllerDidCrop(_ cropViewController: CropViewController, cropped: UIImage, transformation: Transformation) {
-            parent.model.croppedImage = cropped
-            if let data = cropped.pngData() {
-                self.parent.model.imageData = data
-                print("after \(data)")
-            } else {
-                print("Failed to get PNG data for cropped UIImage.")
-            }
-            
-            print("transformation is \(transformation)")
-            parent.presentationMode.wrappedValue.dismiss()
-        }
-        
+               
         func cropViewControllerDidCancel(_ cropViewController: CropViewController, original: UIImage) {
             parent.presentationMode.wrappedValue.dismiss()
         }

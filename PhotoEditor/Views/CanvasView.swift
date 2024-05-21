@@ -23,7 +23,7 @@ struct CanvasView: UIViewRepresentable {
         
         if let image = UIImage(data: imageData) {
             let imageView = UIImageView(image: image)
-            imageView.frame = CGRect(x: 0, y: 0, width: rect.width + 35, height: rect.height)
+            imageView.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
             
@@ -48,7 +48,7 @@ struct CanvasView: UIViewRepresentable {
        // Add new UIImageView
         if let image = UIImage(data: imageData) {
            let imageView = UIImageView(image: image)
-          imageView.frame = CGRect(x: 0, y: 0, width: rect.width + 35, height: rect.height)
+          imageView.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
           imageView.contentMode = .scaleAspectFit
           imageView.clipsToBounds = true
                     

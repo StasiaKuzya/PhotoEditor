@@ -22,6 +22,7 @@
 		5A9129422BF4BA5000B81B5F /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = 5A9129412BF4BA5000B81B5F /* Mantis */; };
 		5A9129692BF4FD3E00B81B5F /* AddCancelColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9129682BF4FD3E00B81B5F /* AddCancelColor.swift */; };
 		5A91296B2BF504D700B81B5F /* PickPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A91296A2BF504D700B81B5F /* PickPhoto.swift */; };
+		5ACEE3A52BFCB4D4005BAAD6 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACEE3A42BFCB4D4005BAAD6 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5A91293E2BF4A77000B81B5F /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		5A9129682BF4FD3E00B81B5F /* AddCancelColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCancelColor.swift; sourceTree = "<group>"; };
 		5A91296A2BF504D700B81B5F /* PickPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickPhoto.swift; sourceTree = "<group>"; };
+		5ACEE3A42BFCB4D4005BAAD6 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				5A91291A2BF38D3100B81B5F /* ContentView.swift */,
 				5A9129342BF3D56500B81B5F /* PickPhotoView.swift */,
 				5A91293A2BF3DCAE00B81B5F /* DrawingScreen.swift */,
+				5ACEE3A42BFCB4D4005BAAD6 /* EditView.swift */,
 				5A91293E2BF4A77000B81B5F /* CanvasView.swift */,
 				5A9129362BF3D5AF00B81B5F /* ImagePicker.swift */,
 				5A9129312BF3A27900B81B5F /* ImageCropper.swift */,
@@ -214,6 +217,7 @@
 				5A91291B2BF38D3100B81B5F /* ContentView.swift in Sources */,
 				5A9129192BF38D3100B81B5F /* PhotoEditorApp.swift in Sources */,
 				5A9129392BF3D81B00B81B5F /* DrawingViewModel.swift in Sources */,
+				5ACEE3A52BFCB4D4005BAAD6 /* EditView.swift in Sources */,
 				5A9129372BF3D5AF00B81B5F /* ImagePicker.swift in Sources */,
 				5A9129282BF38F3900B81B5F /* HeadlineView.swift in Sources */,
 				5A91293D2BF3E82B00B81B5F /* TextBox.swift in Sources */,
